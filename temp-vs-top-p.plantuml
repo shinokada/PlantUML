@@ -1,0 +1,9 @@
+@startuml temp-vs-top-p
+
+temp --> "Adjusts probability distribution\nof all tokens" as adjust_prob
+topp --> "Limits token selection to a\nsubset with cumulative probability\nless than or equal to threshold" as limit_selection
+
+adjust_prob --> "Affects overall diversity\nby making distribution more\nor less uniform" as effect_temp
+limit_selection --> "Impacts diversity by setting\na hard threshold for token\nselection" as effect_topp
+
+@enduml

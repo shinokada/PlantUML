@@ -1,0 +1,16 @@
+@startuml loginprocess
+skinparam monochrome true
+skinparam backgroundColor #FFFFFF
+skinparam ArrowColor Black
+skinparam ArrowFontSize 15
+
+actor User
+participant "Login Interface" as UI
+participant "Authentication System" as Auth
+
+User -> UI: Enter username and password
+UI -> Auth: Validate user credentials
+Auth --> UI: Verification result
+UI --> User: Display result
+
+@enduml
